@@ -8,3 +8,6 @@ gradlew
 gradlew.bat
 gradle/wrapper
 build/
+
+# Maven
+target/

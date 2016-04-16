@@ -1,4 +1,0 @@
-rootProject.name = 'jtwig-examples'
-
-include ':jtwig-spring-boot-simple'
-
