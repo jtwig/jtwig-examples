@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.akhikhl.gretty:gretty:+'
+    }
+}
+
+group 'org.jtwig.example'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'org.akhikhl.gretty'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "http://dl.bintray.com/jtwig/maven"
+    }
+}
+
+dependencies {
+    compile 'org.jtwig:jtwig-spring:5.16'
+    compile 'org.springframework:spring-webmvc:4.2.5.RELEASE'
+}

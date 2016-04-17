@@ -1,0 +1,44 @@
+<web-app>
+    <!-- Configure ContextLoaderListener to use AnnotationConfigWebApplicationContext
+         instead of the default XmlWebApplicationContext -->
+    <context-param>
+        <param-name>contextClass</param-name>
+        <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+    </context-param>
+
+    <!--<context-param>-->
+        <!--<param-name>contextConfigLocation</param-name>-->
+        <!--<param-value></param-value>-->
+    <!--</context-param>-->
+
+    <!-- Bootstrap the root application context as usual using ContextLoaderListener -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- Declare a Spring MVC DispatcherServlet as usual -->
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!-- Configure DispatcherServlet to use AnnotationConfigWebApplicationContext
+             instead of the default XmlWebApplicationContext -->
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>
+                org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+            </param-value>
+        </init-param>
+        <!-- Again, config locations must consist of one or more comma- or space-delimited
+             and fully-qualified @Configuration classes -->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>org.jtwig.example.config.WebConfig</param-value>
+        </init-param>
+    </servlet>
+
+    <!-- map all requests for /app/* to the dispatcher servlet -->
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+</web-app>
