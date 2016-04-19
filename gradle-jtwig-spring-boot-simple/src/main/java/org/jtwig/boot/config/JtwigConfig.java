@@ -7,12 +7,13 @@ import org.jtwig.spring.boot.config.JtwigViewResolverConfigurer;
 import org.jtwig.web.servlet.JtwigRenderer;
 import org.springframework.context.annotation.Configuration;
 
+import static org.jtwig.environment.EnvironmentConfigurationBuilder.configuration;
+
 @Configuration
 public class JtwigConfig implements JtwigViewResolverConfigurer {
-
     @Override
     public void configure(JtwigViewResolver viewResolver) {
-        viewResolver.setRenderer(new JtwigRenderer(EnvironmentConfigurationBuilder.configuration()
+        viewResolver.setRenderer(new JtwigRenderer(configuration()
                 .extensions().add(new MyExtension()).and()
                 .build()));
     }
