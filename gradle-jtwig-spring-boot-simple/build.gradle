@@ -13,8 +13,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-web:1.2.3.RELEASE'
-    compile 'org.jtwig:jtwig-spring-boot-starter:5.14'
+    compile 'org.jtwig:jtwig-spring-boot-starter:5.+'
 
     testCompile 'commons-io:commons-io:2.4'
     testCompile 'org.mockito:mockito-core:1.10.19'
