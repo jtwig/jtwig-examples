@@ -1,0 +1,19 @@
+group 'org.jtwig'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "http://dl.bintray.com/jtwig/maven"
+    }
+}
+
+dependencies {
+    compile "org.jtwig:jtwig-translate-extension:1.+"
+    compile 'org.slf4j:slf4j-simple:1.7.21'
+}
