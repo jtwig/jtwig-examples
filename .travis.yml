@@ -1,3 +1,4 @@
 language: java
+script: sh build.sh
 jdk:
   - oraclejdk7
