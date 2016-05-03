@@ -26,6 +26,6 @@ repositories {
 }
 
 dependencies {
-    compile 'org.jtwig:jtwig-spring:5.17'
+    compile 'org.jtwig:jtwig-spring:5.+'
     compile 'org.springframework:spring-webmvc:4.2.5.RELEASE'
 }
