@@ -1,0 +1,20 @@
+group 'org.jtwig'
+version '1.0'
+
+apply plugin: 'java'
+
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "http://dl.bintray.com/jtwig/maven"
+    }
+}
+
+dependencies {
+    compile 'org.jtwig:jtwig-core:5.+'
+    compile 'org.springframework:spring-webmvc:4.2.5.RELEASE'
+}
