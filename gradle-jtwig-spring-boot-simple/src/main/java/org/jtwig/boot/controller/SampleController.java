@@ -1,16 +1,13 @@
 package org.jtwig.boot.controller;
 
-import org.jtwig.boot.config.JtwigConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@Import(JtwigConfig.class)
 @EnableAutoConfiguration
 public class SampleController {
     @RequestMapping("/{name}")
