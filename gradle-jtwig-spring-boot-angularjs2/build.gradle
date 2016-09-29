@@ -1,0 +1,61 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '1.4.1.RELEASE'
+        classpath group: 'com.moowork.gradle', name: 'gradle-node-plugin', version: '0.13'
+    }
+}
+
+group 'org.jtwig'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+apply plugin: 'com.moowork.node'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.4.1.RELEASE'
+    compile group: 'org.jtwig', name: 'jtwig-spring-boot-starter', version: '5.62'
+    compile group: 'org.jtwig', name: 'jtwig-hot-reloading-extension', version: '1.34'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+bootRun {
+    args = ["--spring.profiles.active=" + (project.hasProperty("profile") ? profile : "prod")]
+}
+
+node {
+    version = '4.6.0'
+    npmVersion = '3.10.7'
+    distBaseUrl = 'https://nodejs.org/dist'
+    download = true
+    workDir = file("${project.buildDir}/build/nodejs")
+    nodeModulesDir = file("${project.projectDir}/src/main/resources/client")
+}
+
+task compileTypescript(type: NpmTask) {
+    // install the express package only
+    args = ['run', 'compile']
+}
+
+compileTypescript.dependsOn(npmInstall)
+bootRepackage.dependsOn(compileTypescript)
+bootRun.dependsOn(compileTypescript)
+
+clean {
+    delete 'src/main/resources/client/dist'
+    delete 'src/main/resources/client/node_modules'
+    delete 'src/main/resources/client/typings'
+}
