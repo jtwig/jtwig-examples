@@ -2,19 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jtwig</groupId>
-  <artifactId>gradle-jtwig-core-simple</artifactId>
+  <artifactId>gradle-jtwig-render-extension-simple</artifactId>
   <version>1.0</version>
   <dependencies>
     <dependency>
       <groupId>org.jtwig</groupId>
-      <artifactId>jtwig-core</artifactId>
-      <version>5.70</version>
+      <artifactId>jtwig-spring-boot-starter</artifactId>
+      <version>5.71</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-webmvc</artifactId>
-      <version>4.2.5.RELEASE</version>
+      <groupId>org.jtwig</groupId>
+      <artifactId>jtwig-render-extension</artifactId>
+      <version>1.54</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>

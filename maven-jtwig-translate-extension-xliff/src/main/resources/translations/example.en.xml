@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<xliff version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:xliff:document:1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/cs02/xliff-core-1.2-strict.xsd">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="example_one">
+                <source>Hello world</source>
+                <target>Hello World</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
