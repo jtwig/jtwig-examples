@@ -15,5 +15,5 @@ repositories {
 }
 
 dependencies {
-    compile "org.jtwig:jtwig-spaceless-extension:1.+"
+    compile "org.jtwig:jtwig-spaceless-extension:5.+"
 }

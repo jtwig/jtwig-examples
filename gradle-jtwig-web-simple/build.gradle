@@ -27,6 +27,6 @@ repositories {
 
 
 dependencies {
-    compile 'org.jtwig:jtwig-web:1.+'
+    compile 'org.jtwig:jtwig-web:5.+'
     compile 'javax.servlet:javax.servlet-api:3.1.0'
 }

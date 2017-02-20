@@ -14,8 +14,8 @@ repositories {
 }
 
 dependencies {
-    compile "org.jtwig:jtwig-translate-extension:1.+"
-    compile "org.jtwig:jtwig-xliff:1.+"
+    compile "org.jtwig:jtwig-translate-extension:5.+"
+    compile "org.jtwig:jtwig-xliff:5.+"
 
     compile 'org.slf4j:slf4j-simple:1.7.21'
 }

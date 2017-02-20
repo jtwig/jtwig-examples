@@ -16,5 +16,5 @@ repositories {
 
 dependencies {
     compile 'org.jtwig:jtwig-spring-boot-starter:5.+'
-    compile 'org.jtwig:jtwig-render-extension:1.+'
+    compile 'org.jtwig:jtwig-render-extension:5.+'
 }
